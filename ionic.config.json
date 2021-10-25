@@ -1,0 +1,7 @@
+{
+  "name": "api-sguweb",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
