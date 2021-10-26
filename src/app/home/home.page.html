@@ -1,19 +1,23 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>Pessoas</ion-title>
+    <ion-title>Sistama de Gestao Universitaria</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true" class="ion-padding">
 
-  <ion-list>
-    <ion-item-sliding *ngFor="let u of usuarios">
-      <ion-item-options>
-        <ion-item-option color="danger"(click)="remover(u.id)">Deletar</ion-item-option>
-      </ion-item-options>
-      <ion-item>{{u.nome}}</ion-item>
-    </ion-item-sliding>
-  </ion-list>
+  <ion-img style="width: 80px; height: 80px;" src="https://sgu.unicentro.br/img/header/uni.png"></ion-img>
 
+  <form #f="ngForm" (ngSubmit)="enviaLogin(f)" >
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input ngModel name="ccd_usuario"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Senha</ion-label>
+      <ion-input ngModel name="csenha" type="password"></ion-input>
+    </ion-item>
+    <ion-button fill="outline" expand="block" type="Submit">Acessar</ion-button>
+  </form>
 </ion-content>
 

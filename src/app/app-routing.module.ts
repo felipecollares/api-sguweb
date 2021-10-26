@@ -10,7 +10,15 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'lista-usuarios',
+    loadChildren: () => import('./lista-usuarios/lista-usuarios.module').then( m => m.ListaUsuariosPageModule)
   },
+  {
+    path: 'user-alert',
+    loadChildren: () => import('./user-alert/user-alert.module').then( m => m.UserAlertPageModule)
+  },
+
 ];
 
 @NgModule({
