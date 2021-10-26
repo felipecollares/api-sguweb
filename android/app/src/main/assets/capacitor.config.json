@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "api-sguweb",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
